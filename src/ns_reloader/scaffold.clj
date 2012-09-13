@@ -31,4 +31,4 @@ Using the same key twice will override the old scaffold - this makes for more sa
 
 (defn start-tracker-with-scaffold
   [dirs & [delay reload-fn]]
-  (core/start-nstracker dirs delay (fn [] (run-scaffolds) (reload-fn))))
+  (core/start-nstracker dirs delay (fn [n] (run-scaffolds) (reload-fn))))
